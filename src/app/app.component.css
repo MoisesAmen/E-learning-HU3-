@@ -1,0 +1,28 @@
+.dashboard {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Asegura que el contenedor principal ocupe toda la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+.grid {
+    display: flex;
+    flex: 1; /* Se expande para ocupar el espacio disponible */
+    overflow-y: hidden; /* Asegura que el contenedor no tenga desbordamiento vertical */
+    
+}
+
+.container{
+    flex: 1; /* Se expande para ocupar el espacio restante */
+    margin: 40px;
+    background: #fff;
+    padding: 1rem 1rem 3rem 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow-y: auto; /* Permite el desplazamiento vertical dentro del contenedor */
+
+    max-width: none;    
+}

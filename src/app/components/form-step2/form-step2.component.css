@@ -1,0 +1,118 @@
+/* Estilos generales del formulario */
+form {
+    /*font-family: 'Arial', sans-serif;*/
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.lesson-container, .class-container {
+    margin-bottom: 20px;
+}
+
+/* Estilos de los títulos de lecciones y clases */
+.class-item h3, .lesson-item h2 {
+    margin-top: 0;
+    margin-bottom: 10px;    
+}
+
+.class-item h3 {
+    color:#333    
+}
+
+.lesson-item h2 {
+    color: #0464f5;
+}
+
+/* Estilos de las etiquetas */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+input[type="text"],
+input[type="url"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+input[type="file"]{
+    margin-bottom: 15px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+button.btn-next {
+    background: #4caf50;
+    color: #fff;
+    align-self: flex-end;
+}
+
+button.btn-prev {
+    background: #f44336;
+    color: #fff;
+}
+
+button.btn-add-class,
+button.btn-add-lesson {
+    background: #2196f3;
+    color: #fff;
+    margin-top: 15px;
+    margin-right: 15px;
+    align-self: flex-start;
+}
+
+button.btn-remove-class,
+button.btn-remove-lesson {
+    background: #f44336;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.class-item, .lesson-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: #fafafa;
+}
+
+.class-item h3, .lesson-item h2 {
+    margin-top: 0;
+    
+}
+
+.class-item h3 {
+    color:#333
+    
+}
+
+.lesson-item h2 {
+    color: #0464f5;
+}
+
+.class-item button, .lesson-item button {
+    align-self: flex-end;
+}
+
+button.btn-remove-class,
+button.btn-remove-lesson {
+    align-self: flex-end;
+}
+

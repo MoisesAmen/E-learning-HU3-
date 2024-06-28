@@ -1,0 +1,37 @@
+<form (ngSubmit)="onSubmit()">
+    <div class="lesson-container">
+      <div *ngFor="let lesson of lessons; let i = index" class="lesson-item">
+        <h2>Lección {{i + 1}}</h2>
+        <label for="lessonName{{i}}">Nombre de la lección</label>
+        <input id="lessonName{{i}}" name="lessonName{{i}}" type="text" [(ngModel)]="lesson.name" required>
+        <label for="lessonDescription{{i}}">Descripción</label>
+        <textarea id="lessonDescription{{i}}" name="lessonDescription{{i}}" [(ngModel)]="lesson.description"></textarea>
+        <div class="class-container">
+          <div *ngFor="let classItem of lesson.classes; let j = index" class="class-item">
+            <h3>Clase {{j + 1}}</h3>
+            <label for="className{{i}}{{j}}">Nombre de la clase</label>
+            <input id="className{{i}}{{j}}" name="className{{i}}{{j}}" type="text" [(ngModel)]="classItem.name" required>
+            <label for="classUrl{{i}}{{j}}">Url del video</label>
+            <input id="classUrl{{i}}{{j}}" name="classUrl{{i}}{{j}}" type="url" [(ngModel)]="classItem.videoUrl">
+            <label for="classImage{{i}}{{j}}">Imagen del clip</label>
+            <input id="classImage{{i}}{{j}}" name="classImage{{i}}{{j}}" type="file" [(ngModel)]="classItem.image" accept="image/*">
+            <label for="classNotes{{i}}{{j}}">Anotaciones</label>
+            <textarea id="classNotes{{i}}{{j}}" name="classNotes{{i}}{{j}}" [(ngModel)]="classItem.notes"></textarea>
+            <label for="classRepo{{i}}{{j}}">Repositorio</label>
+            <input id="classRepo{{i}}{{j}}" name="classRepo{{i}}{{j}}" type="url" [(ngModel)]="classItem.repoUrl">
+            <button type="button" class="btn-remove-class" (click)="removeClass(i, j)">Eliminar clase</button>
+          </div>
+        </div>
+        <button type="button" class="btn-add-class" (click)="addClass(i)">Agregar clase</button>
+        <button type="button" class="btn-remove-lesson" (click)="removeLesson(i)">Eliminar lección</button>
+      </div>
+    </div>
+    <button type="button" class="btn-add-lesson" (click)="addLesson()">Agregar lección</button>
+    <div class="button-group">
+      <button type="button" class="btn-prev" (click)="prevStep()">Anterior</button>
+      <button type="submit" class="btn-next" (click)="onSubmit()">Siguiente</button>
+    </div>
+  </form>
+  
+
+

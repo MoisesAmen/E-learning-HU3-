@@ -1,0 +1,14 @@
+<form (ngSubmit)="onNext()">
+  <h2>Datos relevantes</h2>
+  <label for="categoryName">Nombre de la categoría</label>
+  <input type="text" id="categoryName" name="categoryName" maxlength="20" required [(ngModel)]="category.name" name="categoryName">
+  <label for="categoryImage">Imagen referencial</label>
+  <input type="file" id="categoryImage" name="categoryImage" accept="image/*" (change)="onFileChange($event)">
+  <label for="categoryDescription">Descripción</label>
+  <textarea id="categoryDescription" name="categoryDescription" maxlength="60" rows="4" required [(ngModel)]="category.description" name="categoryDescription"></textarea>
+  <div class="button-group">
+    <button type="submit" class="btn-next">Continuar</button>
+  </div>
+</form>
+    
+

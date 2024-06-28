@@ -1,0 +1,60 @@
+form{
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.illustration {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    height: 500px;
+}
+
+/* Media query para pantallas de tamaño máximo 768px (tamaño común de tabletas y móviles) */
+@media (max-width: 768px) {
+    .illustration {
+        height: auto; /* Se adapta al contenido */
+    }
+}
+
+.summary {
+    padding: 15px;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+p{
+    width: min(95%, 30rem);
+    text-decoration: none;
+    margin-top: 30px; /* Elimina el margen superior */
+    margin-left: auto; /* Centra el párrafo horizontalmente */
+    margin-right: auto; /* Centra el párrafo horizontalmente */
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+button.btn-next {
+    background: #4caf50;
+    color: #fff;
+}
+
+button.btn-prev {
+    background: #f44336;
+    color: #fff;
+}
+
+
